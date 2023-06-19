@@ -32,3 +32,7 @@ tests/_support/_generated
 
 #vagrant folder
 /.vagrant
+
+# Front generated
+web/app.js
+web/mix-manifest.json

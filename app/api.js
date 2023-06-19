@@ -1,7 +1,8 @@
 import axios from 'axios';
 
+// TODO: baseURL вынести в env
 const axiosClient = axios.create({
-    baseURL: 'http://localhost:8080',
+    baseURL: 'http://test-task.local',
     responseType: 'json',
     headers: {
         'Content-Type': 'application/json',

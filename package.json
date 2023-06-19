@@ -10,5 +10,10 @@
     "@vue/compiler-sfc": "^3.2.11",
     "laravel-mix": "^6.0.31",
     "vue-loader": "^16.2.0"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/.bin/webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/.bin/webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/.bin/webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js"
   }
 }

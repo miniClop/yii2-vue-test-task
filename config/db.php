@@ -2,13 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'sqlite:' . dirname(__DIR__) . '/db/app.db',
+    'dsn' => 'mysql:host=mysql;dbname=test_task',
     'username' => 'root',
-    'password' => '',
-    'charset' => 'utf8',
-
-    // Schema cache options (for production environment)
-    //'enableSchemaCache' => true,
-    //'schemaCacheDuration' => 60,
-    //'schemaCache' => 'cache',
+    'password' => 'root',
+    'tablePrefix' => 'sds_',
+    'charset' => 'utf8mb4',
 ];

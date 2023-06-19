@@ -1,27 +1,27 @@
 import {createRouter, createWebHistory} from 'vue-router';
-import BooksList from './components/BooksList';
-import BookItem from './components/BookItem';
-import BookForm from './components/BookForm';
+import ClientsList from './components/ClientsList';
+import ClientItem from './components/ClientItem';
+import ClientForm from './components/ClientForm';
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            name: 'books',
+            name: 'clients',
             path: '/',
-            component: BooksList,
+            component: ClientsList,
         },
         {
-            name: 'book-form',
-            path: '/book/edit/:bookId?',
-            component: BookForm,
+            name: 'client-form',
+            path: '/client/edit/:clientId?',
+            component: ClientForm,
             props: true,
-            alias: '/book/add'
+            alias: '/client/add'
         },
         {
-            name: 'book-item',
-            path: '/book/:bookId(\\d+)',
-            component: BookItem,
+            name: 'client-item',
+            path: '/client/:clientId(\\d+)',
+            component: ClientItem,
             props: true
         },
     ],

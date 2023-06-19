@@ -1,18 +1,18 @@
 <template>
   <div class='container'>
-    <a-typography-title>Vue Library App</a-typography-title>
+    <a-typography-title>Тестовое задание для backend-программиста</a-typography-title>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import BooksList from './components/BooksList.vue';
-import BookItem from './components/BookItem';
+import ClientsList from './components/ClientsList.vue';
+import ClientItem from './components/ClientItem';
 
 export default {
   components: {
-    BooksList,
-    BookItem
+    ClientsList,
+    ClientItem
   }
 }
 </script>

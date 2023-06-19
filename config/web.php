@@ -10,6 +10,7 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        '@reportsStorage'   => '@common/assets/reports',
     ],
     'components' => [
         'request' => [
@@ -51,7 +52,14 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => true,
             'rules' => [
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'book'],
+                [
+                    'class' => yii\rest\UrlRule::class,
+                    'controller' => 'client',
+                    'extraPatterns' => [
+                        'GET generateRecords' => 'generate-records',
+                        'GET exportDocument' => 'export-document',
+                    ],
+                ],
                 '<url:(.*)>' => 'site/index',
             ],
         ],
